@@ -6,7 +6,7 @@ export default function createFormReducer({name, fields, nonFieldProperties, ext
     const defaultState = {
         ...nonFieldProperties,
         values: {},
-        errors: {}
+        errors: {},
     }
 
     fields.map((field) => {
@@ -20,11 +20,19 @@ export default function createFormReducer({name, fields, nonFieldProperties, ext
         if(action.type === `${name}/UPDATE_FIELD`) {
             const validationFunction = fields.find((field) => field.name === action.payload.field).validate
 
-            return {
-                ...state,
-                 values: {...state.values, [action.payload.field]: action.payload.value},
-                 errors: {...state.errors, [action.payload.field]: validationFunction(action.payload.value)}
-             }
+            if(validationFunction) {
+                return {
+                    ...state,
+                     values: {...state.values, [action.payload.field]: action.payload.value},
+                     errors: {...state.errors, [action.payload.field]: validationFunction(action.payload.value)}
+                }
+            } else {
+                return {
+                    ...state,
+                    values: {...state.values, [action.payload.field]: action.payload.value}
+                }
+            }
+
         }
 
         if(action.type === `${name}/UPDATE_ERROR`) {

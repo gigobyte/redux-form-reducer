@@ -91,7 +91,9 @@ Errors get set automatically by redux-form-reducer, but if you need to set an er
 }
 ```
 
-#### Everything mentioned in practice
+There is also a helper action for easily resetting the form, just dispatch a ```${name_of_the_form}/RESET``` action with no payload
+
+## Example
 
 myReducer.js
 ```js

@@ -16,9 +16,7 @@ This library provides an easy way to setup a reducer that has built-in handling 
 
 ## Installation
 
-```
-npm install --save redux-form-reducer
-```
+[![NPM](https://nodei.co/npm/redux-form-reducer.png)](https://nodei.co/npm/redux-form-reducer/)
 
 ## How to Use
 

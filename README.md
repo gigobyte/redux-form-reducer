@@ -50,7 +50,7 @@ First, you want to create your reducer. This is done by calling the ```createFor
 1.  ```name``` - the name of the form, the only mandatory argument, redux actions are going to be prefixed with that name
 2. ```fields``` - an array of objects, each describing a field in the form. A field can have a ```name```, a ```default``` value and a validation function. On error the validation function **MUST** return a string with the error message
 3. ```nonFieldProperties``` - since this library is intented only as a plugin, you can set the default values of any non-field properties here
-4. ```extendReducer``` - a reducer function for handling any other actions you may have for the form, for example handling form submittion or whatever your heart desires.
+4. ```extendReducer``` - a reducer function for handling any other actions you may have for the form, for example handling form submition or whatever your heart desires.
 
 The reducer, once added to your store, will produce the following state:
 

@@ -23,7 +23,7 @@ export default function createFormReducer({name, fields, nonFieldProperties, ext
             return {
                 ...state,
                  values: {...state.values, [action.payload.field]: action.payload.value},
-                 errors: {...state.errors, [action.payload.field]: validationFunction()}
+                 errors: {...state.errors, [action.payload.field]: validationFunction(action.payload.value)}
              }
         }
 
@@ -38,6 +38,10 @@ export default function createFormReducer({name, fields, nonFieldProperties, ext
             return updatedDefaultState
         }
 
-        return state
+        if(extendReducer) {
+            return extendReducer(state, action)
+        } else {
+            return state
+        }
     }
 }

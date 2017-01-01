@@ -36,7 +36,7 @@ const myReducer = createFormReducer({
     },
     extendReducer: function(state, action) {
         if(action.type === 'SUBMIT') {
-             return {...state, submitItemAjaxCallStatus: 'pending'}
+             return {...state, submitAjaxCallStatus: 'pending'}
         }
         
         return state

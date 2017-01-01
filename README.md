@@ -38,6 +38,8 @@ const myReducer = createFormReducer({
         if(action.type === 'SUBMIT') {
              return {...state, submitItemAjaxCallStatus: 'pending'}
         }
+        
+        return state
     }
 })
 ```

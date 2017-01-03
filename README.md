@@ -1,5 +1,5 @@
 # redux-form-reducer
->**Dead simple form reducer for less boilerplate and more developer satisfaction**
+>**Dead simple form reducer inspired by Angular**
 
 
 

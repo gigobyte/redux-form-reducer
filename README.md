@@ -10,7 +10,7 @@ This library provides an easy way to setup a reducer that has built-in handling 
 ## Why Should I Use It?
 
 * Easy to setup
-* Extremely lightweight! *Under 2KB* <img width="15" src="http://emojipedia-us.s3.amazonaws.com/cache/ec/ea/ecea30f0a206c2ef20eba907f760f4cc.png"></img>  
+* Extremely lightweight! *Under 2KB* <img width="15" src="http://emojipedia-us.s3.amazonaws.com/cache/ec/ea/ecea30f0a206c2ef20eba907f760f4cc.png">
 * Component-agnostic - no complicated component structures needed, bindings are extremely simple
 * Easily pluggable in your existing reducer
 
